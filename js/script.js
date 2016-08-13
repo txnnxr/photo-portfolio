@@ -11,4 +11,8 @@ $(document).ready(function(){
 		$(".res-text", this).css("color", "white");
 		$("img", this).css("opacity", "1.0");
 	});
+
+
 });
+
+

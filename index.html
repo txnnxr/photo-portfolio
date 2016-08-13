@@ -6,26 +6,32 @@
 	<script src="https://use.fontawesome.com/112cfad2d1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="instafeed.min.js"></script>
 	<script src = "js/script.js"></script>
 	<link href="css/style.css" rel="stylesheet">
+
+	<script type="text/javascript">
+	    var feed = new Instafeed({
+	        get: 'user',
+	        userId: '145638511',
+	        accessToken: '145638511.d8d1d50.2ce167359207465da16a4537edc267e2',
+	        limit: 9,
+	        resolution: 'standard_resolution'
+	    });
+	    feed.run();
+	</script>
 </head>
 <body>
-	<div class= "row">
-		<div class = "col-sm-12 title-font content-center"><a href= "index.html">TXNNXR</a></div>
-	</div>
-	<div class="row bottom-buffer">
-		<div class = "col-sm-1 col-sm-offset-5 content-center"><a href = "journal.html">Journal</a></div>
-		<div class = "col-sm-1 content-center"><a href ="about.html">About</a></div>
-	</div>
+<header>
+	<h2 class = ""><a href= "index.html">TXNNXR</a></h2>
+	<ul class="">
+		<li class = ""><a href = "journal.html">Journal</a></li>
+		<li class = ""><a href ="about.html">About</a></li>
+	</ul>
+</header>
 
-
-
-
-
-
-
-
-<div id="myCarousel" class="carousel slide div-center" data-ride="carousel">
+<!-- Beginning of Bootstrap Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -81,48 +87,20 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<!-- End of Bootstrap Carousel -->
+
+<!-- Add a search bar by: 
+	Tags 
+	Location
+	People
+ -->
 
 
+<!-- Use instafeed.js to get 9 instagram imafes here -->
+<h2>Instagram</h2>
+<!-- Instafeed Code -->
+<div id="instafeed"></div>
 
-
-
-<!-- For recent write a scraper that grabs camera roll or whatever from flickr so I don't have 
-to worry about updating? -->
-
-
-<!-- 	<div class="row recent-row">
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-	</div>
-	<div class="row recent-row">
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-	</div>
-	<div class="row recent-row">
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-		<div class = "col-sm-12 col-md-4 center buffer">
-			<a data-flickr-embed="true"  href="https://www.flickr.com/photos/131454556@N04/21932954193/in/dateposted-public/" title="Untitled"><img src="https://c2.staticflickr.com/1/630/21932954193_a003eac4bc_n.jpg" width="320" height="212" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-	</div> -->
 <footer class="top-buffer bottom-buffer content-center">
 	<a href="https://www.instagram.com/txnnxr/" class ="footlink" target = "_blank">
 		<i class="fa fa-instagram font-awesome" aria-hidden="true"></i>

@@ -19,6 +19,27 @@ a:link{
 	color: black;
 }
 
+
+/*instafeed code*/
+#instafeed{
+	margin: auto;
+	width: 100%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+#instafeed>a>img{
+	width: 94%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+
+/*li{
+	display: inline;
+	padding-left: 1%;
+	padding-right: 1%;
+}*/
+
 .carousel{
 	width: 80%;
 }
@@ -88,3 +109,23 @@ a:link{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+
+
+@media(max-width:767px){
+}
+@media(min-width:768px){
+	#instafeed>a>img{
+		width: 44%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+}
+@media(min-width:992px){	
+	#instafeed>a>img{
+		width: 26%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}}
+@media(min-width:1200px){}
