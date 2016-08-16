@@ -6,27 +6,19 @@
 	<script src="https://use.fontawesome.com/112cfad2d1.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="instafeed.min.js"></script>
 	<script src = "js/script.js"></script>
 	<link href="css/style.css" rel="stylesheet">
+<!-- Have a page of just people in straight vertical lines with the main people I shoot(Ellen, Kassie, etc.) in black and white on hover opens up to a 2:3 color image and you can click it and it will take you to a page that has all the photos of that person. 
 
-	<script type="text/javascript">
-	    var feed = new Instafeed({
-	        get: 'user',
-	        userId: '145638511',
-	        accessToken: '145638511.d8d1d50.2ce167359207465da16a4537edc267e2',
-	        limit: 9,
-	        resolution: 'standard_resolution'
-	    });
-	    feed.run();
-	</script>
+This will probably take a lot of JS and some backend ish. Tags for every photo, probs stored in a database somewhere. Store images(or reference to images) in database so they can be queried when needed.
+  -->
 </head>
 <body>
 <header>
 	<h2 class = ""><a href= "index.html">TXNNXR</a></h2>
 	<ul class="">
-		<li class = ""><a href = "journal.html">Journal</a></li>
-		<li class = ""><a href ="about.html">About</a></li>
+		<li class = ""><a href = "journal.html"><h4>Journal</h4></a></li>
+		<li id="right-nav-item"><a href ="about.html"><h4>About</h4></a></li>
 	</ul>
 </header>
 
@@ -95,19 +87,47 @@
 	People
  -->
 
-
 <!-- Use instafeed.js to get 9 instagram imafes here -->
-<h2>Instagram</h2>
+<h3>Instagram</h3>
 <!-- Instafeed Code -->
 <div id="instafeed"></div>
 
-<footer class="top-buffer bottom-buffer content-center">
-	<a href="https://www.instagram.com/txnnxr/" class ="footlink" target = "_blank">
-		<i class="fa fa-instagram font-awesome" aria-hidden="true"></i>
-	</a>
-	<a href="mailto:tannerjameswells@gmail.com?subject=Photo Inquiry" class="footlink">
-		<i class="fa fa-envelope-o font-awesome" aria-hidden="true"></i>
-	</a>
+<footer> <!-- The background for this is weird // has something to do with footer height or footer ul height // fix it sometime would ya??? -->
+  <div class= "credits">
+    <p>Website by Tanner Wells</p>
+    <p>Photographs by Tanner Wells</p>
+  </div>
+  <ul class="test">
+    <li>
+      <a href="mailto:tannerjameswells@gmail.com?subject=Photo Inquiry">
+        <i class="fa fa-envelope-square font-awesome" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://soundcloud.com/txnnnxr" target = "_blank">
+       <i class="fa fa-soundcloud font-awesome" aria-hidden="true"></i>
+      </a>
+    </li>        
+    <li>
+      <a href="https://www.instagram.com/txnnxr/" target = "_blank">
+    	 <i class="fa fa-instagram font-awesome" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+
+
+  <!-- Instafeed.js Scripts -->
+  <script type="text/javascript" src="instafeed.min.js"></script>
+  <script type="text/javascript">
+      var feed = new Instafeed({
+          get: 'user',
+          userId: '145638511',
+          accessToken: '145638511.1677ed0.15e91a2c112d4567b9118ac2ffdb62fb',
+          limit: 6,
+          resolution: 'standard_resolution'
+      });
+      feed.run();
+  </script>
 </footer>		
 </body>
 </html>

@@ -1,6 +1,4 @@
-.top{
 
-}
 .title-font{
 	font-size: 50px;
 	font-family: helvetica;
@@ -33,15 +31,68 @@ a:link{
 	margin-right: 3%;
 }
 
-
-/*li{
+header{
+	margin-left: 0%;
+	width: 100%;
+}
+body{
+    padding: 2% 5% 2% 5%;
+}
+ul{
+	list-style-type: none;
+	width: 100%;
+	padding: 0 0 0 0;
+}
+li{
 	display: inline;
-	padding-left: 1%;
 	padding-right: 1%;
-}*/
+}
+header li{
 
+}
+h2{
+	font-size: 4em;
+}
+h3{
+	font-size: 3em;
+}
+ul h4{
+    display: inline;
+    font-size: 1.9em
+}
+header ul{
+    padding-left: 1%;
+}
+#right-nav-item{
+    padding-left: 1%;
+}
+footer{
+	width: 100%;
+	padding: 2% 2% 0% 2%;
+	background-size: 100%;
+	background-color: rgba(243, 243, 243, 0.71);
+	border-radius: 10px;
+	height: 20%;
+	margin-top: 2%;
+}
+.credits{
+	padding-top: 1%;
+	display: inline;
+	float: left;
+	width: 50%;
+}
+footer ul{
+	padding-top: 1%
+}
+footer li{
+	display: inline;
+	float: right;
+	padding-left: 1%;
+	padding-bottom: 1%
+}
 .carousel{
-	width: 80%;
+	width: 95%;
+	margin: auto;
 }
 
 
@@ -100,10 +151,6 @@ a:link{
 }
 .content-center{
 	text-align: center;
-}
-.footlink{
-	margin-left: 1%;
-	margin-right: 1%;
 }
 .div-center{
 	margin-left: auto;
