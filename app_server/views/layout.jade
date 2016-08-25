@@ -4,6 +4,7 @@ html
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		title= title
 		link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+		script(src="https://use.fontawesome.com/112cfad2d1.js")
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
 		nav.navbar.navbar-default(role="navigation")
@@ -18,7 +19,7 @@ html
 
 				.collapse.navbar-collapse#navigation
 					ul.nav.navbar-nav
-						li.active
+						li
 							a(href="/about/") Journal
 						li
 							a(href="/about/") About
@@ -26,23 +27,20 @@ html
 		.container
 			block content
 			.row
-				.col-sm-12
-					footer
-						ul
-							li
-								a(href='mailto:tannerjameswells@gmail.com?subject=Photo Inquiry', target='_blank')
-									i.fa.fa-envelope-square.font-awesome(aria-hidden='true')
-							li
-								a(href='https://soundcloud.com/txnnnxr', target='_blank')
-									i.fa.fa-soundcloud.font-awesome(aria-hidden='true')
-							li
-								a(href='https://www.instagram.com/txnnxr/', target='_blank')
-									i.fa.fa-instagram.font-awesome(aria-hidden='true')		
+				footer
+					ul
+						li
+							a(href='mailto:tannerjameswells@gmail.com?subject=Photo Inquiry', target='_blank')
+								i.fa.fa-envelope-square.font-awesome(aria-hidden='true')
+						li
+							a(href='https://soundcloud.com/txnnnxr', target='_blank')
+								i.fa.fa-soundcloud.font-awesome(aria-hidden='true')
+						li
+							a(href='https://www.instagram.com/txnnxr/', target='_blank')
+								i.fa.fa-instagram.font-awesome(aria-hidden='true')		
 										
 		script(src='/javascripts/jquery-3.1.0.min.js')
 		script(src='/bootstrap/js/bootstrap.min.js')
 		script(src='/javascripts/jquery.bcSwipe.min.js')
 		script(src='/javascripts/script.js')
-		script(src="https://use.fontawesome.com/112cfad2d1.js")
-
 	

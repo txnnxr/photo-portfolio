@@ -7,15 +7,34 @@ body{
 img{
 	width: 100%;
 }
-.carousel{
-	width: 100%;
+
+
+
+a{
+	color:black;
 }
-.slide-title{
-	font-size: 2.5rem;
+a:link{
+	color:black;
 }
-.slide-subtitle{
-	display: none;
+a:hover{
+	color: blue;
 }
+
+/*Footer*/
+footer ul{
+	list-style-type: none;
+	padding: 1rem;
+	text-align: center;
+}
+footer ul li{
+	display: inline-block;
+	padding: 1em;
+	color: black;
+}
+i.fa.font-awesome{
+	font-size: 5rem;
+}
+
 
 /*Bootstrap Navbar*/
 .navbar-default{
@@ -33,13 +52,44 @@ img{
 .navbar-default .navbar-toggle .icon-bar{
 	background-color: black;
 }
+.navbar-default .navbar-nav>li>a{
+	color: black;
+}
 
+/*Bootstrap Carousel*/
+.carousel{
+	width: 100%;
+}
+.carousel-control .glyphicon-chevron-left{
+	display: none;
+}
+.carousel-control .glyphicon-chevron-right{
+	display: none;
+}
+.slide-title{
+	font-size: 2.5rem;
+	display: none;
+}
+.slide-subtitle{
+	display: none;
+}
 
 
 
 @media(min-width: 720px){
+
+	/*Bootstrap Carousel*/
+	.slide-title{
+		display: block;
+	}
 	.slide-subtitle{
 		display: block;		
+	}
+	.carousel-control .glyphicon-chevron-left{
+		display: inline-block;
+	}
+	.carousel-control .glyphicon-chevron-right{
+		display: inline-block;
 	}
 }
 
@@ -220,4 +270,4 @@ footer li{
 		margin-right: 3%;
 	}}
 @media(min-width:1200px){}
-*/*/
+*/
