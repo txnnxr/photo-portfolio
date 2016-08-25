@@ -1,5 +1,41 @@
+:root{
+	font-size: 10px;
+}
+header{
+	margin: 1rem;
+}
+body{
+	padding: 1.5rem;
+}
 img{
 	width: 100%;
+}
+h1{
+	font-size: 2em;
+}
+.logo{
+	float: left;
+	padding: 0.5em;
+	margin: 0.5rem;
+}
+ul li{
+	display: inline;
+	float: left;
+	font-size: 2.5rem;
+	padding: 0.5em;
+}
+.nav-links{
+	float: right;
+	margin: 0.5rem;
+}
+
+@media(min-width: 720px){
+	.logo{
+		font-size: 4rem;
+	}
+	.nav-links li{
+		font-size: 4rem;
+	}
 }
 
 /*
