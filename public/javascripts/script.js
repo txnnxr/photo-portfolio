@@ -13,6 +13,8 @@ $(document).ready(function(){
 	});
 
 
+	//swipe plugin
+	$('.carousel').bcSwipe({ threshold: 50 });
 });
 
 

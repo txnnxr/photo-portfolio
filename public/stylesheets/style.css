@@ -1,40 +1,45 @@
 :root{
 	font-size: 10px;
 }
-header{
-	margin: 1rem;
-}
 body{
-	padding: 1.5rem;
+	padding: 0rem;
 }
 img{
 	width: 100%;
 }
-h1{
-	font-size: 2em;
+.carousel{
+	width: 100%;
 }
-.logo{
-	float: left;
-	padding: 0.5em;
-	margin: 0.5rem;
-}
-ul li{
-	display: inline;
-	float: left;
+.slide-title{
 	font-size: 2.5rem;
-	padding: 0.5em;
 }
-.nav-links{
-	float: right;
-	margin: 0.5rem;
+.slide-subtitle{
+	display: none;
 }
 
+/*Bootstrap Navbar*/
+.navbar-default{
+	z-index: 2;
+	/*position: absolute;*/
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.49);
+}
+.navbar-default .navbar-brand{
+	color: black;
+}
+.navbar-default .navbar-toggle{
+	border-color: black;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: black;
+}
+
+
+
+
 @media(min-width: 720px){
-	.logo{
-		font-size: 4rem;
-	}
-	.nav-links li{
-		font-size: 4rem;
+	.slide-subtitle{
+		display: block;		
 	}
 }
 
