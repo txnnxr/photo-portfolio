@@ -37,6 +37,9 @@ i.fa.font-awesome{
 
 
 /*Bootstrap Navbar*/
+.navbar{
+	margin-bottom: auto;
+}
 .navbar-default{
 	z-index: 2;
 	/*position: absolute;*/
@@ -54,6 +57,10 @@ i.fa.font-awesome{
 }
 .navbar-default .navbar-nav>li>a{
 	color: black;
+}
+
+.neuter-container-padding{
+	padding: 0;
 }
 
 /*Bootstrap Carousel*/
@@ -90,6 +97,12 @@ i.fa.font-awesome{
 	}
 	.carousel-control .glyphicon-chevron-right{
 		display: inline-block;
+	}
+
+
+	.neuter-container-padding{
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
