@@ -1,0 +1,46 @@
+extends layout
+
+block content
+	form.upload-form
+		fieldset
+			img#preview(src="#", alt="preview")
+			input(type="file", name="img-upload", onchange="readURL(this);")#get-img
+		fieldset#photo-info
+			| Title 
+			input#img-title(type="text", name="title", value="imgTitle")
+			// value should be replaced with a procedurally generated string so it's unique to the db - or title can just be name of file (indiePhoto format would always make them unique anyway - actually might not be true)
+			| <br />People
+			input(type="text", name="people", value=" ")
+			| <br />Location
+			input(type="text", name="location", value="Philadelphia, PA, USA")
+			| <br />Camera
+			ul
+				li
+					input(type="radio", name="camera", value="Great Wall")
+					|  Great Wall
+				li
+					input(type="radio", name="camera", value="Holga 135")
+					|  Holga 135
+				li
+					input(type="radio", name="camera", value="Tolne")
+					|  Tolne 35mm
+				li 
+					input(type="radio", name="camera", value="Canon EOS Elan 7n")
+					|  Canon EOS Elan 7n
+				li
+					input(type="radio", name="camera", value="Holga 120 TLR")
+					|  Holga 120 TLR
+				li
+					input(type="radio", name="camera", value="Fujifilm Instax 210")
+					|  Fujifilm Instax 210
+				li 
+					input(type="radio", name="camera", value="Fujifilm Instax Mini 8")
+					|  Fujifilm Instax Mini 8
+				li
+					input(type="radio", name="camera", value="Disposable")
+					|  Disposable
+			| <br />Tags
+			input(type="text", name="tags", value=" ")
+			// use google maps api to select a place and get the coordinates - then save the coords
+			// this can be used to create a photo map later
+		input#upload-button(type="submit", name="upload-button", value="upload")

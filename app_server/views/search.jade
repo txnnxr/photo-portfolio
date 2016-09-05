@@ -1,0 +1,70 @@
+extends layout
+
+block content
+	.search(ng-app = "searchApp")
+		form.search-form(ng-controller= "SearchController as sc")
+			fieldset.standard
+				input.search-bar(type="text", name="query", placeholder="name in place" ng-model="query.text")
+				input.search-button(type="submit", value="Search")
+				a.advanced-link Advanced Options
+				fieldset.advanced-options
+					fieldset.advanced-section.people
+						span.advanced-section-title People
+						ul
+							li
+								input(type="checkbox", name="Taylor Schmid", value="Taylor Schmid") 
+								|  Taylor Schmid
+							li
+								input(type="checkbox", name="Ellen Butler", value="Ellen Butler") 
+								|  Ellen Butler
+							li
+								input(type="checkbox", name="Jenny Kocsis", value="Jenny Kocsis") 
+								|  Jenny Kocsis
+							li
+								input(type="checkbox", name="Dillon Gray", value="Dillon Gray") 
+								|  Dillon Gray
+					fieldset.advanced-section.locations
+						span.advanced-section-title Places
+						ul
+							li
+								input(type="checkbox", value="Wellington", name="Wellington") 
+								|  Wellington
+							li
+								input(type="checkbox", value="Coromandel", name="Coromandel") 
+								|  Coromandel
+							li
+								input(type="checkbox", value="Cathedral Cove", name="Cathedral Cove") 
+								|  Cathedral Cove
+							li
+								input(type="checkbox", value="Dunedin", name="Dunedin")
+								|  Dunedin
+					fieldset.advanced-section.tags
+						span.advanced-section-title Tags
+						ul
+							li
+								input(type="checkbox", value="Wellington", name="Wellington") 
+								|  Wellington
+							li
+								input(type="checkbox", value="Coromandel", name="Coromandel") 
+								|  Coromandel
+							li
+								input(type="checkbox", value="Cathedral Cove", name="Cathedral Cove") 
+								|  Cathedral Cove
+							li
+								input(type="checkbox", value="Dunedin", name="Dunedin") 
+								|  Dunedin
+				.results-container(ng-show="query.text.length")
+					.results-row(ng-repeat="rows in formattedResults | filter: query.text | limitTo: loadMoreLimit" emit-last-repeater-element)
+						.image-container(ng-repeat="result in rows | filter: query.text")
+							img.image-results(src= "{{result.url}}")
+							//{{result.title}}
+					button.load-more(ng-click="loadMoreResults()")
+						| Load More Results
+
+
+
+
+
+
+
+
