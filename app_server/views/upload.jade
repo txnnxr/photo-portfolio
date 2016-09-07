@@ -4,7 +4,7 @@ block content
 	form.upload-form
 		fieldset
 			img#preview(src="#", alt="preview")
-			input(type="file", name="img-upload", onchange="readURL(this);")#get-img
+			input(type="file", accept="image/*", required="required",  name="img-upload", onchange="readURL(this);")#get-img
 		fieldset#photo-info
 			| Title 
 			input#img-title(type="text", name="title", value="imgTitle")
@@ -12,7 +12,9 @@ block content
 			| <br />People
 			input(type="text", name="people", value=" ")
 			| <br />Location
-			input(type="text", name="location", value="Philadelphia, PA, USA")
+			input#placeID(type='text' name='placeID' value="test")
+			input.controls#pac-input(type="text", placeholder="Enter a location")
+			#map(style="width:400px;height:400px;")
 			| <br />Camera
 			ul
 				li
@@ -41,6 +43,5 @@ block content
 					|  Disposable
 			| <br />Tags
 			input(type="text", name="tags", value=" ")
-			// use google maps api to select a place and get the coordinates - then save the coords
 			// this can be used to create a photo map later
 		input#upload-button(type="submit", name="upload-button", value="upload")

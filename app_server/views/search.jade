@@ -53,6 +53,8 @@ block content
 							li
 								input(type="checkbox", value="Dunedin", name="Dunedin") 
 								|  Dunedin
+				p(ng-show="!query.text.length") 
+					just start typing random letters something is bound to come up
 				.results-container(ng-show="query.text.length")
 					.results-row(ng-repeat="rows in formattedResults | filter: query.text | limitTo: loadMoreLimit" emit-last-repeater-element)
 						.image-container(ng-repeat="result in rows | filter: query.text")
