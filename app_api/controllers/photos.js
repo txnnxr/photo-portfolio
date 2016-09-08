@@ -25,7 +25,22 @@ module.exports.photosCreate = function(req, res){
 	});
 }
 module.exports.photosListByDate = function(req, res){
-	sendJsonResponse(res, 200, {"status" : "success"});
+	Photo
+		.find().sort('-dateUploaded')
+		.limit(2) //up this to 12 when uploaded enough data 
+		.exec(function(err, photo) {
+			if(!photo){
+				sendJsonResponse(res, 404, {
+					"message": "recent photos not found"
+				});
+				return
+			}else if(err){
+				sendJsonResponse(res, 404, err);
+				return
+			}else{
+				sendJsonResponse(res, 200, photo);
+			}
+		});
 }
 module.exports.photosReadOne = function(req, res){
 	if(req.params && req.params.photoid){
@@ -69,7 +84,7 @@ module.exports.photosUpdateOne = function(req, res){
           sendJsonResponse(res, 400, err);
           return;
         }
-		photo.name = req.body.title,
+		photo.title = req.body.title,
 		photo.url = req.body.url,
 		photo.location = req.body.location,
 		photo.people = req.body.people.split(","), //create array by splitting on commas
