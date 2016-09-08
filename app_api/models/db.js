@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 
 var dbURI = "mongodb://localhost/Photos";
 if (process.env.NODE_ENV === 'production') {
-    dbURI = process.env.MONGODB_URI;//process.env.MONGODB_URI;
+    dbURI = process.env.MONGODB_URI;
+    //seems to be connecting to live DB on Heroku 
+    //but testing with production in terminal doesn't connect
 }
 mongoose.connect(dbURI);
 

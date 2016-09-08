@@ -5,7 +5,8 @@ var photoSchema = new mongoose.Schema({
 	url: String,
 	location: String,
 	people: [String],
-	Camera: String,
+	camera: String,
+	tags:[String],
 	dateUploaded: { type: Date, "default": Date.now}
 });
 
