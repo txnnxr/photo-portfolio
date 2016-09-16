@@ -32,7 +32,7 @@
     display: none; }
 
 :root {
-  font-size: 16px; }
+  font-size: 13px; }
 
 body {
   padding: 0; }
@@ -53,7 +53,7 @@ a:active {
 .nav {
   text-align: center; }
   .nav a.title {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     color: rgba(78, 205, 196, 0.66);
     text-decoration: none;
     text-shadow: 6px 5px rgba(255, 107, 107, 0.66); }
@@ -137,6 +137,9 @@ ul {
     margin-left: 0.5rem;
     margin-right: 0.5rem; } }
 @media(min-width:961px) {
+  :root {
+    font-size: 16px; }
+
   .nav a.title {
     font-size: 5.5rem; }
 
