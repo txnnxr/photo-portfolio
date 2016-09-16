@@ -11,6 +11,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/about', ctrlOthers.about);
 router.get('/search', ctrlSearch.search);
-router.get('/upload', ctrlAdmin.upload);
+router.get('/upload', ctrlAdmin.uploadPage);
 
 module.exports = router;

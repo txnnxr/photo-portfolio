@@ -5,7 +5,6 @@ var sendJsonResponse = function(res, status, content){
 	res.status(status);
 	res.json(content);
 };
-
 module.exports.photosCreate = function(req, res){
 	console.log(req.body);
 	Photo.create({
@@ -23,11 +22,11 @@ module.exports.photosCreate = function(req, res){
 			sendJsonResponse(res, 201, photo);
 		}
 	});
-}
+};
 module.exports.photosListByDate = function(req, res){
 	Photo
 		.find().sort('-dateUploaded')
-		.limit(2) //up this to 12 when uploaded enough data 
+		.limit(12) //up this to 12 when uploaded enough data 
 		.exec(function(err, photo) {
 			if(!photo){
 				sendJsonResponse(res, 404, {
@@ -41,7 +40,7 @@ module.exports.photosListByDate = function(req, res){
 				sendJsonResponse(res, 200, photo);
 			}
 		});
-}
+};
 module.exports.photosReadOne = function(req, res){
 	if(req.params && req.params.photoid){
 		Photo
@@ -63,7 +62,7 @@ module.exports.photosReadOne = function(req, res){
 			"message" : "No locationid in request"
 		})	
 	}
-}
+};
 module.exports.photosUpdateOne = function(req, res){
   if (!req.params.photoid) {
     sendJsonResponse(res, 404, {
@@ -99,7 +98,7 @@ module.exports.photosUpdateOne = function(req, res){
         });
       }
   );
-}
+};
 module.exports.photosDeleteOne = function(req, res){
 	var photoid = req.params.photoid;
 	if(photoid){
@@ -116,4 +115,5 @@ module.exports.photosDeleteOne = function(req, res){
 		sendJsonResponse(res, 404, {
 			"message": "No photoid"
 		});
-	}}
+	}};
+	

@@ -1,44 +1,18 @@
 extends layout
 
 block content
-	#myCarousel.carousel.slide(data-ride='carousel')
-		ol.carousel-indicators
-			li.active(data-target='#myCarousel', data-slide-to='0')
-			li(data-target='#myCarousel', data-slide-to='1')
-			li(data-target='#myCarousel', data-slide-to='2')
-			li(data-target='#myCarousel', data-slide-to='3')
-		.carousel-inner
-			.item.active
-				img(src='https://s3.amazonaws.com/txnnxr-bucket/lei.jpg', alt='First slide')
-				.container
-					.carousel-caption
-						h1.slide-title An Intoduction to the south.
-						h4.slide-subtitle 
-							em Charleston, SC
-			.item
-				img(src='https://s3.amazonaws.com/txnnxr-bucket/jenny-gold.jpg', alt='Second slide')
-				.container
-					.carousel-caption
-						h1.slide-title Golden Slumbers						
-						h4.slide-subtitle
-							em Lancaster, PA
-			.item
-				img(src='https://s3.amazonaws.com/txnnxr-bucket/sean-rachel.jpg', alt='Third slide')
-				.container
-					.carousel-caption
-						h1.slide-title Come Over, Old Lover
-						h4.slide-subtitle
-							em Cathedral Cove, NZ
-			.item
-				img(src='https://s3.amazonaws.com/txnnxr-bucket/erin-rock.jpg', alt='Third slide')
-				.container
-					.carousel-caption
-						h1.slide-title Is There Room Eough for Me?
-						h4.slide-subtitle
-							em Coromandel, NZ
-
-
-			a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-				span.glyphicon.glyphicon-chevron-left
-			a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-				span.glyphicon.glyphicon-chevron-right
+	.model-showcase
+		.model-box
+			img(src='https://s3.amazonaws.com/txnnxr-bucket/erin-rock-min.jpg')
+		.model-box
+			img(src='https://s3.amazonaws.com/txnnxr-bucket/sean-rachel-min.jpg')
+		.model-box
+			img(src='https://s3.amazonaws.com/txnnxr-bucket/jenny-gold-min.jpg')
+		.model-box
+			img(src='https://s3.amazonaws.com/txnnxr-bucket/lei-min.jpg')
+		.model-box
+			img(src='https://s3.amazonaws.com/txnnxr-bucket/me-min.jpg')
+	//.search
+		input.search-bar(type="text", name="query", placeholder="name in place" ng-model="query.text")
+		button.search-button
+			i.fa.fa-search(aria-hidden="true")

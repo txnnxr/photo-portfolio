@@ -13,6 +13,14 @@ $(document).ready(function(){
 	});
 
 
+	 $('.model-box').hover(function(){
+	 	$(this).css({width: '70%', filter: 'grayscale(0%)'});
+	 	$(this).siblings().css({width: '7.5%'});
+	 }, function(){
+	 	$(this).css({width: '20%', filter: 'grayscale(100%)'});
+	 	$(this).siblings().css({width: '20%'});
+	 });
+
 //Search Page
 	//show advanced search options
 	$('.advanced-link').click(function(){
