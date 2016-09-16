@@ -8,26 +8,10 @@ html
 		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbOfU5i5Fhw1rsyx93E8-Ym8qS4IBDK7s&libraries=places")
 		link(rel='stylesheet', href='/stylesheets/style1.css')
 	body
-		nav.navbar.navbar-default(role="navigation")
-			.container-fluid
-				.navbar-header
-					button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navigation")
-						span.sr-only Toggle navigation
-						span.icon-bar.bar
-						span.icon-bar.bar
-						span.icon-bar.bar
-					a.navbar-brand(href="/") TXNNXR
-
-				.collapse.navbar-collapse#navigation
-					ul.nav.navbar-nav
-						li
-							a(href="/about/") Journal
-						li
-							a(href="/search/") Search
-						li
-							a(href="/about/") About
-						li 
-							a(href="/upload/") Upload
+		.nav
+			a(href="/").title TXNNXR	
+			p.subtitle 
+				| Philadelphia based film photgrapher / front-end developer
 		.container.neuter-container-padding
 			block content
 			footer
@@ -48,3 +32,23 @@ html
 		script(src="/angular/angular.min.js")
 		script(src="/angular/searchApp.js")
 		script(src='/javascripts/google-analytics.js')
+//- nav.navbar.navbar-default(role="navigation")
+//- 	.container-fluid
+//- 		.navbar-header
+//- 			button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navigation")
+//- 				span.sr-only Toggle navigation
+//- 				span.icon-bar.bar
+//- 				span.icon-bar.bar
+//- 				span.icon-bar.bar
+//- a.navbar-brand(href="/") TXNNXR
+
+//- .collapse.navbar-collapse#navigation
+//- 	ul.nav.navbar-nav
+//- 		li
+//- 			a(href="/about/") Journal
+//- 		li
+//- 			a(href="/search/") Search
+//- 		li
+//- 			a(href="/about/") About
+//- 		li 
+//- 			a(href="/upload/") Upload	

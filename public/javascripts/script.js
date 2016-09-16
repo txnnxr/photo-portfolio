@@ -1,7 +1,85 @@
 $(document).ready(function(){
+	var width = $(window).width();
+	checkWidth(width);
+	$(window).resize(function(){
+		width = $(window).width();
+		checkWidth(width);
+	});
 	$("#myCarousel").carousel({interval: 3500, pause: "hover"});
 
+function changeTitle(box){
+	//box will be whatever class is attached to the child image
+	switch(box){
+		case 'box1':
+			$('.title').css({color: 'black'});	
+			break;
+		case 'box2':
+			$('.title').css({color: 'black'});	
+			break;
+		case 'box3':
+			$('.title').css({color: 'black'});	
+			break;
+		case 'box4':
+			$('.title').css({color: 'black'});	
+			break;
+		case 'box5':
+			$('.title').css({color: 'black'});	
+			break;
+		default:
+			$('.title').css({color: 'black'});	
+	}
+}
 
+var showTime = 500;
+
+
+//clean up this messy ass function
+
+//this should take the width
+function checkWidth(w){
+	if((w >= 0) && (w <= 640)){
+		$('.model-box').hover(function(){  //should only run hover once 
+			//then inside hover use variables to set the widths of the current and not-current boxes
+			$(this).css({width: '90%', filter: 'grayscale(0%)'});
+			$(this).siblings().css({width: '2.5%'});
+			$('p.box-title', this).show(showTime);
+		}, function(){
+			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+			$(this).siblings().css({width: '20%'});
+			$('p.box-title', this).hide(showTime);
+		});
+	}else if((w >= 641) && (w <= 1024)){
+		$('.model-box').hover(function(){
+			$(this).css({width: '80%', filter: 'grayscale(0%)'});
+			$(this).siblings().css({width: '5%'});
+			$('p.box-title', this).show(showTime);
+		}, function(){
+			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+			$(this).siblings().css({width: '20%'});
+			$('p.box-title', this).hide(showTime);
+		});
+	}else if((w >= 1025) && (w <=1279)){
+		$('.model-box').hover(function(){
+			$(this).css({width: '63%', filter: 'grayscale(0%)'});
+			$(this).siblings().css({width: '9.25%'});
+			$('p.box-title', this).show(showTime);
+		}, function(){
+			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+			$(this).siblings().css({width: '20%'});
+			$('p.box-title', this).hide(showTime);
+		});
+	}else if(w >= 1280){
+		$('.model-box').hover(function(){
+			$(this).css({width: '65%', filter: 'grayscale(0%)'});
+			$(this).siblings().css({width: '7.5%'});
+			$('p.box-title', this).show(showTime);
+		}, function(){
+			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+			$(this).siblings().css({width: '20%'});
+			$('p.box-title', this).hide(showTime);
+		});
+	}
+}
 
 	$(".post").hover(function(){
 		$(".res-text", this).css("color", "black");
@@ -12,14 +90,6 @@ $(document).ready(function(){
 		$("img", this).css("opacity", "1.0");
 	});
 
-
-	 $('.model-box').hover(function(){
-	 	$(this).css({width: '70%', filter: 'grayscale(0%)'});
-	 	$(this).siblings().css({width: '7.5%'});
-	 }, function(){
-	 	$(this).css({width: '20%', filter: 'grayscale(100%)'});
-	 	$(this).siblings().css({width: '20%'});
-	 });
 
 //Search Page
 	//show advanced search options

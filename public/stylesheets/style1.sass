@@ -1,13 +1,10 @@
-//colors
-$black:  black
-$color_water_leaf_71_approx: rgba(161, 233, 229, 0.71)
-$color_gravel_approx: rgb(76, 76, 76)
-$color_scarpa_flow_63_approx: rgba(86, 83, 103, 0.63)
-$blue: blue
-$white_49: rgba(255, 255, 255, 0.49)
 
 //fonts
-$font_0: Helvetica
+@import 'fonts'
+@import 'colors'
+
+
+
 
 @import 'showcase'
 
@@ -16,56 +13,88 @@ $font_0: Helvetica
 
 body 
 	padding: 0
+a
+	color: rgba($medium-turquoise, 0.88)
+	text-decoration: none
+	text-shadow: 3px 3px rgba($pastel-red, 0.5)
+a:hover
+	color: rgba($pastel-red, 0.9)
+	text-decoration: none
+	text-shadow: 2px 2px rgba($medium-turquoise, 0.9)
+a:active
+	text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 
-
-
-.search 
-	width: 95%
-	margin: auto
-
-.search-bar 
-	width: 80%
-	font-size: 3rem
-	height: 7rem
-	margin-top: 1rem
-	margin-bottom: 2rem
-
-.search-button 
-	height: 7rem
-	font-size: 3rem
-	width: 20%
-
-.results-container 
-	margin: 2rem
-
-.results-row 
-	display: block
-	margin-top: 0.5rem
-	margin-bottom: 0.5rem
-
-.image-container 
-	width: 100%
-	margin: 0.5rem
-
-.advanced-link 
-	margin-top: 1rem
-	margin-bottom: 1rem
-	display: block
+//navbar
+.nav
 	text-align: center
-	font-size: 2rem
+	a.title		
+		font-size: 4.5rem
+		//3d nav transparent shadows effects
+		color: rgba($medium-turquoise, 0.66)
+		text-decoration: none
+		text-shadow: 6px 5px rgba($pastel-red, 0.66)
+		&:hover
+			color: rgba($pastel-red, 0.8)
+			text-decoration: none
+			text-shadow: 4px 3px rgba($medium-turquoise, 0.8)
+		&:active
+			text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
+	.subtitle
+		color: rgba($raisn-black, 0.75)
+		font-family: $railway
+		font-size: 1rem
+		font-weight: 700
+		margin-top: -0.8rem
 
-.advanced-options 
-	display: none
 
-.advanced-section 
-	margin: auto
-	display: block
-	width: 95%
-	border: 1px solid $black
 
-.advanced-section-title 
-	font-size: 2rem
-	margin: 0.5rem
+// .search 
+// 	width: 95%
+// 	margin: auto
+
+// .search-bar 
+// 	width: 80%
+// 	font-size: 3rem
+// 	height: 7rem
+// 	margin-top: 1rem
+// 	margin-bottom: 2rem
+
+// .search-button 
+// 	height: 7rem
+// 	font-size: 3rem
+// 	width: 20%
+
+// .results-container 
+// 	margin: 2rem
+
+// .results-row 
+// 	display: block
+// 	margin-top: 0.5rem
+// 	margin-bottom: 0.5rem
+
+// .image-container 
+// 	width: 100%
+// 	margin: 0.5rem
+
+// .advanced-link 
+// 	margin-top: 1rem
+// 	margin-bottom: 1rem
+// 	display: block
+// 	text-align: center
+// 	font-size: 2rem
+
+// .advanced-options 
+// 	display: none
+
+// .advanced-section 
+// 	margin: auto
+// 	display: block
+// 	width: 95%
+// 	border: 1px solid $black
+
+// .advanced-section-title 
+// 	font-size: 2rem
+// 	margin: 0.5rem
 
 ul 
 	list-style-type: none
@@ -98,33 +127,24 @@ ul
 	font-size: 1.5rem
 	border-color: $color_scarpa_flow_63_approx
 
-a 
-	color: $black
-	&:link 
-		color: $black
+// .navbar 
+// 	margin-bottom: auto
 
-	&:hover 
-		color: $blue
+// .navbar-default 
+// 	z-index: 2
+// 	width: 100%
+// 	background-color: $white_49
+// 	.navbar-brand 
+// 		color: $black
 
-
-.navbar 
-	margin-bottom: auto
-
-.navbar-default 
-	z-index: 2
-	width: 100%
-	background-color: $white_49
-	.navbar-brand 
-		color: $black
-
-	.navbar-toggle 
-		border-color: $black
-		.icon-bar 
-			background-color: $black
+// 	.navbar-toggle 
+// 		border-color: $black
+// 		.icon-bar 
+// 			background-color: $black
 
 
-	.navbar-nav > li > a 
-		color: $black
+// 	.navbar-nav > li > a 
+// 		color: $black
 
 
 .neuter-container-padding 
@@ -171,6 +191,9 @@ a
 
 
 @media(min-width:961px) 
+	.nav
+		a.title
+			font-size: 5.5rem
 	.slide-title 
 		display: block
 
@@ -230,10 +253,9 @@ footer ul
 
 @media(min-width:1025px) 
 
-@media(min-width:1281px)
-
-
-
+@media(min-width:1281px) //large screens
+	.model-box
+		width: 20%
 
 
 

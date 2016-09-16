@@ -1,3 +1,5 @@
+@import 'fonts'
+$railway: 'Railway', sans-serif
 .model-showcase 
 	overflow: hidden
 .model-box 
@@ -11,6 +13,19 @@
 	-o-filter: grayscale(100%)
 	-o-transition: .5s ease-in-out
 	height: 30rem
+	position: relative
+	z-index: 1
 	img 
 		width: auto
 		height: 100%
+	p.box-title
+		z-index: 10
+		position: absolute
+		color: white
+		bottom: 0
+		padding-left: 1em
+		padding-bottom: 0.3em
+		font-family: $railway
+		font-size: 3rem
+		font-weight: 700
+		display: none
