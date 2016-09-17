@@ -1,80 +1,103 @@
 $(document).ready(function(){
-	var width = $(window).width();
-	checkWidth(width);
-	$(window).resize(function(){
-		width = $(window).width();
-		checkWidth(width);
-	});
-	$("#myCarousel").carousel({interval: 3500, pause: "hover"});
+$("#myCarousel").carousel({interval: 3500, pause: "hover"});
 
 
-//sets search bar to clicked model box 
+//sets search bar to clicked model box
 $('.model-box').click(function(){
 	var searchTerm = $('p.box-title', this).text();
 	$('input.search-bar').attr('value', searchTerm);
 	$('input.search-bar').attr('placeholder', searchTerm);
 });
 
+	var showTime = 500;
 
 //changes title colors to correspond with current model box
 var name = '';
 $('.model-box').hover(function(){
+	//title color
 	$('a.title').removeClass('schmid-colors')
 	name = $(this).attr('name');
 	$('a.title').addClass(name);
+
+
+	//checks the width and then opens model boxes appropriately 
+	var w = $(window).width();
+	if((w >= 0) && (w <= 640)){
+		$(this).css({width: '90%', filter: 'grayscale(0%)'});
+		$(this).siblings().css({width: '2.5%'});
+	}else if((w >= 641) && (w <= 1024)){
+		$(this).css({width: '80%', filter: 'grayscale(0%)'});
+		$(this).siblings().css({width: '5%'});
+	}else if((w >= 1025) && (w <=1279)){
+		$(this).css({width: '63%', filter: 'grayscale(0%)'});
+		$(this).siblings().css({width: '9.25%'});
+	}else if(w >= 1280){
+		$(this).css({width: '65%', filter: 'grayscale(0%)'});
+		$(this).siblings().css({width: '7.5%'});
+	}
+
+	//shows model box title 
+	$('p.box-title', this).show(showTime);
+
 }, function(){
+	//title color
 	$('a.title').addClass('schmid-colors')
 	$('a.title').removeClass(name);
+
+	//reset the model box sizes and reset to grayscale
+	$(this).css({width: '20%', filter: 'grayscale(100%)'});
+	$(this).siblings().css({width: '20%'});
+	$('p.box-title', this).hide(300);
+
 });
 
-var showTime = 500;
 //clean up this messy ass function
 
 //this should take the width
-function checkWidth(w){
-	if((w >= 0) && (w <= 640)){
-		$('.model-box').hover(function(){  //should only run hover once 
-			//then inside hover use variables to set the widths of the current and not-current boxes
-			$(this).css({width: '90%', filter: 'grayscale(0%)'});
-			$(this).siblings().css({width: '2.5%'});
-			$('p.box-title', this).show(showTime);
-		}, function(){
-			$(this).css({width: '20%', filter: 'grayscale(100%)'});
-			$(this).siblings().css({width: '20%'});
-			$('p.box-title', this).hide(showTime);
-		});
-	}else if((w >= 641) && (w <= 1024)){
-		$('.model-box').hover(function(){
-			$(this).css({width: '80%', filter: 'grayscale(0%)'});
-			$(this).siblings().css({width: '5%'});
-			$('p.box-title', this).show(showTime);
-		}, function(){
-			$(this).css({width: '20%', filter: 'grayscale(100%)'});
-			$(this).siblings().css({width: '20%'});
-			$('p.box-title', this).hide(showTime);
-		});
-	}else if((w >= 1025) && (w <=1279)){
-		$('.model-box').hover(function(){
-			$(this).css({width: '63%', filter: 'grayscale(0%)'});
-			$(this).siblings().css({width: '9.25%'});
-			$('p.box-title', this).show(showTime);
-		}, function(){
-			$(this).css({width: '20%', filter: 'grayscale(100%)'});
-			$(this).siblings().css({width: '20%'});
-			$('p.box-title', this).hide(showTime);
-		});
-	}else if(w >= 1280){
-		$('.model-box').hover(function(){
-			$(this).css({width: '65%', filter: 'grayscale(0%)'});
-			$(this).siblings().css({width: '7.5%'});
-			$('p.box-title', this).show(showTime);
-		}, function(){
-			$(this).css({width: '20%', filter: 'grayscale(100%)'});
-			$(this).siblings().css({width: '20%'});
-			$('p.box-title', this).hide(showTime);
-		});
-	}
-}
+// function checkWidth(w){
+// 	if((w >= 0) && (w <= 640)){
+// 		$('.model-box').hover(function(){  //should only run hover once 
+// 			//then inside hover use variables to set the widths of the current and not-current boxes
+// 			$(this).css({width: '90%', filter: 'grayscale(0%)'});
+// 			$(this).siblings().css({width: '2.5%'});
+// 			$('p.box-title', this).show(showTime);
+// 		}, function(){
+// 			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+// 			$(this).siblings().css({width: '20%'});
+// 			$('p.box-title', this).hide(showTime);
+// 		});
+// 	}else if((w >= 641) && (w <= 1024)){
+// 		$('.model-box').hover(function(){
+// 			$(this).css({width: '80%', filter: 'grayscale(0%)'});
+// 			$(this).siblings().css({width: '5%'});
+// 			$('p.box-title', this).show(showTime);
+// 		}, function(){
+// 			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+// 			$(this).siblings().css({width: '20%'});
+// 			$('p.box-title', this).hide(showTime);
+// 		});
+// 	}else if((w >= 1025) && (w <=1279)){
+// 		$('.model-box').hover(function(){
+// 			$(this).css({width: '63%', filter: 'grayscale(0%)'});
+// 			$(this).siblings().css({width: '9.25%'});
+// 			$('p.box-title', this).show(showTime);
+// 		}, function(){
+// 			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+// 			$(this).siblings().css({width: '20%'});
+// 			$('p.box-title', this).hide(showTime);
+// 		});
+// 	}else if(w >= 1280){
+// 		$('.model-box').hover(function(){
+// 			$(this).css({width: '65%', filter: 'grayscale(0%)'});
+// 			$(this).siblings().css({width: '7.5%'});
+// 			$('p.box-title', this).show(showTime);
+// 		}, function(){
+// 			$(this).css({width: '20%', filter: 'grayscale(100%)'});
+// 			$(this).siblings().css({width: '20%'});
+// 			$('p.box-title', this).hide(showTime);
+// 		});
+// 	}
+// }
 
 	$(".post").hover(function(){
 		$(".res-text", this).css("color", "black");
