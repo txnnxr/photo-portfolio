@@ -7,32 +7,27 @@ $(document).ready(function(){
 	});
 	$("#myCarousel").carousel({interval: 3500, pause: "hover"});
 
-function changeTitle(box){
-	//box will be whatever class is attached to the child image
-	switch(box){
-		case 'box1':
-			$('.title').css({color: 'black'});	
-			break;
-		case 'box2':
-			$('.title').css({color: 'black'});	
-			break;
-		case 'box3':
-			$('.title').css({color: 'black'});	
-			break;
-		case 'box4':
-			$('.title').css({color: 'black'});	
-			break;
-		case 'box5':
-			$('.title').css({color: 'black'});	
-			break;
-		default:
-			$('.title').css({color: 'black'});	
-	}
-}
+
+//sets search bar to clicked model box 
+$('.model-box').click(function(){
+	var searchTerm = $('p.box-title', this).text();
+	$('input.search-bar').attr('value', searchTerm);
+	$('input.search-bar').attr('placeholder', searchTerm);
+});
+
+
+//changes title colors to correspond with current model box
+var name = '';
+$('.model-box').hover(function(){
+	$('a.title').removeClass('schmid-colors')
+	name = $(this).attr('name');
+	$('a.title').addClass(name);
+}, function(){
+	$('a.title').addClass('schmid-colors')
+	$('a.title').removeClass(name);
+});
 
 var showTime = 500;
-
-
 //clean up this messy ass function
 
 //this should take the width

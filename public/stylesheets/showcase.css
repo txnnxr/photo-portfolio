@@ -4,6 +4,7 @@
 
 .model-box {
   width: 20%;
+  cursor: pointer;
   overflow: hidden;
   float: left;
   -webkit-filter: grayscale(100%);
