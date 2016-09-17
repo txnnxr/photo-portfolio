@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 .model-showcase {
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
 
 .model-box {
   width: 20%;
@@ -30,5 +31,9 @@
     font-size: 3rem;
     font-weight: 700;
     display: none; }
+
+@media(min-width:961px) {
+  .model-showcase {
+    display: block; } }
 
 /*# sourceMappingURL=showcase.css.map */

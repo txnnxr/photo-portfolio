@@ -6,7 +6,7 @@ var ctrlAdmin = require('../controllers/admin');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 router.get('/about', ctrlOthers.about);
