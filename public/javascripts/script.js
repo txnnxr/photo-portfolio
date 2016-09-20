@@ -2,13 +2,6 @@ $(document).ready(function(){
 $("#myCarousel").carousel({interval: 3500, pause: "hover"});
 
 
-//sets search bar to clicked model box
-$('.model-box').click(function(){
-	var searchTerm = $('p.box-title', this).text();
-	$('input.search-bar').attr('value', searchTerm);
-	$('input.search-bar').attr('placeholder', searchTerm);
-});
-
 	var showTime = 500;
 
 //changes title colors to correspond with current model box
