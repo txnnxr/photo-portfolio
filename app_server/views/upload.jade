@@ -1,10 +1,10 @@
 extends layout
 
 block content
-	form.upload-form(action="/api/upload", method="post", role="form")
+	form.upload-form(action="/api/upload", method="post", role="form", enctype="multipart/form-data")
 		fieldset
 			img#preview(src="#", alt="preview")
-			input(type="file", accept="image/*", required="required",  name="img-upload", onchange="readURL(this);")#get-img
+			input(type="file", accept="image/*", required="required",  name="imgUpload", onchange="readURL(this);")#get-img
 		fieldset#photo-info
 			| Title 
 			input#img-title(type="text", name="title", value="imgTitle")
@@ -45,3 +45,5 @@ block content
 			input(type="text", name="tags", value=" ")
 			// this can be used to create a photo map later
 		input#upload-button(type="submit", name="upload-button", value="upload")
+
+
