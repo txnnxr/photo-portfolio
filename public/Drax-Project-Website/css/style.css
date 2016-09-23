@@ -296,8 +296,8 @@ footer {
 
 @media(min-width: 320px) {
   #toggler:checked + .page-wrap .page-content {
-    padding-left: 0px; }
-
+    padding-left: 0px; } }
+@media (min-width: 481px) {
   .top .bandName {
     font-size: 4rem; }
   .top #subtitle {
