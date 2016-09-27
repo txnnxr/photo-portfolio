@@ -8,20 +8,22 @@
 <body>
 	<div class="nav">
 		<a class="title schmid-colors" href="/">Tanner Wells</a>
-		<p class="subtitle">Tanner Wells, a Philadelphia based front-end developer</p>
+		<p class="subtitle">Philadelphia based front-end developer</p>
 	</div>
 	<div class="block-set" id="work">
-		<h2>Projects</h2>
+		<div class="block-set-title">
+			<h1>Projects</h1>
+		</div>
 		<div class="block work-block">
 			<div class="block-top">
 				<h3 class="block-title">Band Website</h3>
-				<i>(Currently Under Development)</i>
+				<i>Under Development (v0.2)</i>
 			</div>
 			<div class="block-preview">
 				<img src="https://s3.amazonaws.com/txnnxr-bucket/Web-Portfolio/drax-screenshot.png" id="drax-screenshot">
 				<a class="live-link" href="/drax">
 						<i class="fa fa-safari" aria-hidden="true"></i>
-						Live Website
+						Website
 				</a>
 			</div>
 			<p>This is a mock website I designed and developed for a New Zealand
@@ -29,14 +31,13 @@
 			It's still got some bugs to be worked at but I'm really proud of my
 			progess so far.</p>
 			<ul class="skills-applied">
-				<li>Skills applied:</li>
 				<li>HTML</li>
 				<li>CSS/SASS</li>
 				<li>Javascript/jQuery</li>
 				<li>AWS S3</li>
 				<li>Github</li>
 			</ul>
-			<a href="http://www.github.com/txnnxr">
+			<a href="http://www.github.com/txnnxr" class="block-source">
 				<i aria-hidden="true" class="fa fa-github-alt"></i> 
 				Source Code
 			</a>
@@ -44,13 +45,13 @@
 		<div class="block work-block">
 			<div class="block-top">
 				<h3 class="block-title">Photography Portfolio</h3>
-				<i>(Currently Under Development)</i>
+				<i>Under Development (v0.1)</i>
 			</div>
 			<div class="block-preview">	
 				<img>	
 				<a class="live-link" href="/drax">
 					<i class="fa fa-safari" aria-hidden="true"></i>
-					Live Website
+					Website
 				</a>
 			</div>
 			<p>This is projet is a mock photography portfolio which I'm using to
@@ -61,16 +62,17 @@
 			front end that blends form and function into a beautiful and efficient
 			experience for the user.</p>
 			<ul class="skills-applied">
-				<li style="list-style: none">Skilles applied:</li>
 				<li>HTML/Jade</li>
 				<li>CSS/SASS</li>
-				<li>Javascript/jQuery/Node.js/Express/Angular</li>
+				<li>Javascript/jQuery</li>
+				<li>Node.js/Express</li>
+				<li>Angular</li>
 				<li>MongoDB</li>
 				<li>AWS S3</li>
 				<li>Heroku</li>
 				<li>Github</li>
 			</ul>
-			<a href="http://www.github.com/txnnxr">
+			<a href="http://www.github.com/txnnxr" class="block-source">
 				<i aria-hidden="true" class="fa fa-github-alt"></i> 
 				Source Code
 			</a>
@@ -78,7 +80,7 @@
 		<div class="block work-block">
 			<div class="block-top">
 				<h3 class="block-title">iPhone App</h3>
-				<i>Currently in Development</i>
+				<i>Under Development (v0.3)</i>
 			</div>
 			<div class="block-preview">
 				<img src= "https://s3.amazonaws.com/txnnxr-bucket/Web-Portfolio/pond-screenshot.png">
@@ -90,21 +92,22 @@
 			Swift. It's been a great challenge so far and has given me deeper
 			insights in to developing user interfaces for mobile devices.</p>
 			<ul class="skills-applied">
-				<li style="list-style: none">Skills applied:</li>
 				<li>Swift</li>
 				<li>Javascript/Node.js</li>
 				<li>xCode</li>
 				<li>Heroku</li>
 				<li>Github</li>
 			</ul>
-			<a href="http://www.github.com/txnnxr">
+			<a href="http://www.github.com/txnnxr" class="block-source">
 				<i aria-hidden="true" class="fa fa-github-alt"></i> 
 				Source Code
 			</a>
 		</div>
 	</div>
 	<div class="block-set" id="education">
-		<h1>Education</h1>
+		<div class="block-set-title">
+			<h1>Education</h1>
+		</div>
 		<div class="block education-block">
 			<div class="block-top">
 				<h3 class="block-title">B.A. Computer Science</h3>
@@ -115,41 +118,49 @@
 			<div class="block-top">
 				<h3 class="block-title">My Reading List</h3>
 			</div>
-			<div class="book-block">
-				<h3>HTML/CSS</h3><i>Jon Duckett</i>
-			</div>
-			<div class="book-block">
-				<h3>Javascript/jQuery</h3><i>Jon Duckett</i>
-			</div>
-			<div class="book-block">
-				<h3>Don't Make Me Think Revisited</h3><i>Steve Krug</i>
-			</div>
-			<div class="book-block">
+			<a href="https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_1?ie=UTF8&qid=1474941958&sr=8-1&keywords=html+css" target="_blank" class="book-block">
+				<h3>HTML/CSS</h3>
+				<i>&mdash; Jon Duckett</i>
+			</a>
+			<a href="https://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647/ref=pd_bxgy_14_img_2?ie=UTF8&psc=1&refRID=EDA8QDMEPP7FBEZE16GH" target="_blank" class="book-block">
+				<h3>Javascript/jQuery</h3>
+				<i>&mdash; Jon Duckett</i>
+			</a>
+			<a href="https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=pd_bxgy_14_img_3?ie=UTF8&psc=1&refRID=EDA8QDMEPP7FBEZE16GH" target="_blank" class="book-block">
+				<h3>Don't Make Me Think Revisited</h3>
+				<i>&mdash; Steve Krug</i>
+			</a>
+			<a href="https://www.amazon.com/Learning-JavaScript-Data-Structures-Algorithms/dp/1783554878/ref=sr_1_2?s=books&ie=UTF8&qid=1474942014&sr=1-2&keywords=learning+javascript+data" target="_blank" class="book-block">
 				<h3>Learning Javascript Data Structures and
-				Algorithims</h3><i>Loiane Groner</i>
-			</div>
+				Algorithims</h3>
+				<i>&mdash; Loiane Groner</i>
+			</a>
 		</div>
 		<div class="block education-block">
 			<div class="block-top">
 				<h3 class="block-title">Codecademy</h3>
 			</div>
-			<div class="ca-block">
+			<a href="https://www.codecademy.com/learn/web" target="_blank" class="ca-block">
 				<h3>HTML/CSS</h3>
-				<p>100%</p>
-			</div>
-			<div class="ca-block">
+				<i>100%</i>
+			</a>
+			<a href="https://www.codecademy.com/learn/javascript" target="_blank" class="ca-block">
 				<h3>Javascript</h3>
-				<p>100%</p>
-			</div>
-			<div class="ca-block">
+				<i>100%</i>
+			</a>
+			<a href="https://www.codecademy.com/learn/jquery" target="_blank" class="ca-block">
 				<h3>jQuery</h3>
-				<p>100%</p>
-			</div>
-			<a href="https://www.codecademy.com/tannerwells">View My Codecademy Profile</a>
+				<i>100%</i>
+			</a>
+			<a href="https://www.codecademy.com/tannerwells" class="block-source">
+				My Codecademy Profile
+			</a>
 		</div>
 	</div>
 	<div class="block-set" id="contact">
-		<h1>Contact</h1><i>maybe change this name</i>
+		<div class="block-set-title">
+			<h1>Contact</h1>
+		</div>
 		<h3>tannerjameswells@gmail.com</h3>
 		<div class="block contact-block">
 				<h3 class="block-title">

@@ -36,8 +36,11 @@ img
 .block-set
 	padding: 1rem
 	background-color: aliceblue
+.block-set-title
+	color: white
+	text-shadow: 2px 2px 5px black
 .block
-	background-color: rgba(250, 250, 250, 1)
+	background-color: $dirty-white
 	padding: 1rem
 	border-width: 1px 6px 6px 1px
 	border-style: solid
@@ -52,17 +55,89 @@ img
 	text-align: left
 	font-size: 2.0rem
 	margin: 10px auto 0px auto
+.block-source
+	display: block
+	text-align: right
 
-//work-block
+//work-block-set
 #work
 	background-color: rgba(255, 192, 203, 0.3)
-.work-block
-	background-color: rgba(250, 250, 250, 1)
-	border-color: darksalmon
-	border-right-color: rgb(175, 113, 92)
-	.block-title
-		color: pink
+	.work-block
+		border-color: darksalmon
+		border-right-color: rgb(175, 113, 92)
+		.block-title
+			color: pink
+		.skills-applied
+			list-style-type: none
+			margin: auto auto 10px auto
+			padding-left: 0
+			li
+				background-color: gray
+				color: white
+				padding: 0.33rem
+				border-radius: 3px
+				display: inline-block
+				margin: 0.25rem
+				box-shadow: 5px 5px 5px black
 
+//education-block-set
+#education
+	.book-block
+		padding: 0px 5px 15px 5px
+		display: block
+		color: pink
+		text-shadow: none
+		&:hover
+			color: pink
+			text-shadow: none
+		&:active
+			text-shadow: none
+		h3
+			margin: 15px auto 5px auto
+		i
+			color: $medium-turquoise
+			display: block
+			text-align: right
+	.book-block:nth-child(odd)
+		background-color: rgba(242, 242, 242, 0.69)
+		margin-left: -16px
+		margin-right: -16px
+		border-top: 1px solid $border-outline
+		border-bottom: 1px solid $border-outline
+		h3
+			margin-left: 16px 
+			margin-right: 16px
+		i
+			margin-left: 16px 
+			margin-right: 16px	
+	.ca-block
+		padding: 0px 5px 15px 5px
+		display: block
+		color: pink
+		text-shadow: none
+		&:hover
+			color: pink
+			text-shadow: none
+		&:active
+			text-shadow: none
+		h3
+			margin: 15px auto 5px auto
+		i
+			color: $medium-turquoise
+			display: block
+			text-align: right		
+	.ca-block:nth-child(odd)
+		background-color: rgba(242, 242, 242, 0.69)
+		margin-left: -16px
+		margin-right: -16px
+		border-top: 1px solid $border-outline
+		border-bottom: 1px solid $border-outline
+		h3
+			margin-left: 16px 
+			margin-right: 16px
+		i
+			margin-left: 16px 
+			margin-right: 16px	
 //navbar
 .nav
 	text-align: center
@@ -86,8 +161,6 @@ img
 		font-family: $railway
 		font-size: 1rem
 		font-weight: 700
-ul 
-	list-style-type: none
 
 footer ul 
 	list-style-type: none
