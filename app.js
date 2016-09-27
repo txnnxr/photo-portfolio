@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 require('./app_api/models/db');
 
-var routes = require('./app_server/routes/index');
+var photoRoutes = require('./app_server/routes/photoIndex');
 var routesApi = require('./app_api/routes/index');
 var users = require('./app_server/routes/users');
 
@@ -24,8 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use('/', express.static('public/index.html'))
+app.use('/photo', photoRoutes);
 app.use('/api', routesApi);
+app.use('/drax', express.static('public/Drax-Project-Website/index.html'));
 app.use('/users', users);
 
 // catch 404 and forward to error handler

@@ -1,0 +1,119 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'https://fonts.googleapis.com/css?family=Hind:400,500|Lato:400,700';
+.sean-colors {
+  color: rgba(223, 160, 110, 0.66);
+  text-decoration: none;
+  text-shadow: 6px 5px rgba(119, 203, 185, 0.66); }
+
+.jenny-colors {
+  color: rgba(250, 255, 127, 0.66);
+  text-decoration: none;
+  text-shadow: 6px 5px rgba(30, 30, 36, 0.66); }
+
+.ellen-colors {
+  color: rgba(149, 224, 108, 0.66);
+  text-decoration: none;
+  text-shadow: 6px 5px rgba(255, 183, 193, 0.66); }
+
+.kassie-colors {
+  color: rgba(214, 166, 89, 0.66);
+  text-decoration: none;
+  text-shadow: 6px 5px rgba(162, 188, 120, 0.66); }
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif; }
+
+a {
+  color: rgba(78, 205, 196, 0.88);
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 3px 3px rgba(255, 107, 107, 0.5); }
+
+a:hover {
+  color: rgba(255, 107, 107, 0.9);
+  text-decoration: none;
+  text-shadow: 2px 2px rgba(78, 205, 196, 0.9); }
+
+a:active {
+  text-shadow: 0px 0px rgba(78, 205, 196, 0.9); }
+
+.live-link {
+  display: block;
+  text-align: center; }
+
+h3 {
+  color: pink; }
+
+img {
+  width: 100%; }
+
+.block-set {
+  padding: 1rem;
+  background-color: aliceblue; }
+
+.block {
+  background-color: #fafafa;
+  padding: 1rem;
+  border-width: 1px 6px 6px 1px;
+  border-style: solid;
+  border-color: gray;
+  border-right-color: black;
+  border-radius: 8px;
+  margin-top: 1rem; }
+
+.block-top {
+  margin-bottom: 20px; }
+
+.block-title {
+  color: rgba(153, 204, 50, 0.69);
+  text-align: left;
+  font-size: 2rem;
+  margin: 10px auto 0px auto; }
+
+#work {
+  background-color: rgba(255, 192, 203, 0.3); }
+
+.work-block {
+  background-color: #fafafa;
+  border-color: darksalmon;
+  border-right-color: #af715c; }
+  .work-block .block-title {
+    color: pink; }
+
+.nav {
+  text-align: center; }
+  .nav a.title {
+    font-size: 3.3rem;
+    font-family: "Lato", sans-serif; }
+    .nav a.title .schmid-colors {
+      color: rgba(78, 205, 196, 0.66);
+      text-decoration: none;
+      text-shadow: 6px 5px rgba(255, 107, 107, 0.66); }
+    .nav a.title:hover {
+      color: rgba(255, 107, 107, 0.8);
+      text-decoration: none;
+      text-shadow: 4px 3px rgba(78, 205, 196, 0.8); }
+    .nav a.title:active {
+      text-shadow: 0px 0px rgba(78, 205, 196, 0.9); }
+  .nav .subtitle {
+    color: rgba(30, 30, 36, 0.75);
+    font-family: "Railway", sans-serif;
+    font-size: 1rem;
+    font-weight: 700; }
+
+ul {
+  list-style-type: none; }
+
+footer ul {
+  list-style-type: none;
+  padding: 1rem;
+  text-align: center; }
+  footer ul li {
+    display: inline-block;
+    padding: 1em;
+    color: black; }
+  footer ul i.fa.font-awesome {
+    font-size: 4.5rem; }
+
+/*# sourceMappingURL=style.css.map */
