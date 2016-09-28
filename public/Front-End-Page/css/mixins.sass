@@ -1,0 +1,33 @@
+$side-padding: 1.5rem
+
+=updateBlockSidePadding($spad)
+	.block
+		padding-left: $spad
+		padding-right: $spad
+	.block-source
+		margin-left: -$spad
+		margin-right: -$spad
+	#education
+		.book-block:nth-child(odd)
+			margin-left: -$spad
+			margin-right: -$spad
+			h3
+				margin-left: $spad
+				margin-right: $spad
+			i
+				margin-left: $spad 
+				margin-right: $spad	
+		.ca-block:nth-child(odd)
+			margin-left: -$spad
+			margin-right: -$spad
+			h3
+				margin-left: $spad
+				margin-right: $spad
+			i
+				margin-left: $spad
+				margin-right: $spad
+=updateBlockWidth($w)
+	.block
+		width: $w
+		margin-left: auto
+		margin-right: auto

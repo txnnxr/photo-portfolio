@@ -20,23 +20,23 @@
   text-decoration: none;
   text-shadow: 6px 5px rgba(162, 188, 120, 0.66); }
 
+.clear {
+  clear: both;
+  line-height: 0; }
+
 body {
   margin: 0;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  color: #333745; }
 
 a {
-  color: rgba(78, 205, 196, 0.88);
+  color: #f8df4f;
   cursor: pointer;
-  text-decoration: none;
-  text-shadow: 3px 3px rgba(255, 107, 107, 0.5); }
+  text-decoration: none; }
 
 a:hover {
   color: rgba(255, 107, 107, 0.9);
-  text-decoration: none;
-  text-shadow: 2px 2px rgba(78, 205, 196, 0.9); }
-
-a:active {
-  text-shadow: 0px 0px rgba(78, 205, 196, 0.9); }
+  text-decoration: none; }
 
 .live-link {
   display: block;
@@ -49,71 +49,288 @@ img {
   width: 100%; }
 
 .block-set {
-  padding: 1rem;
-  background-color: aliceblue; }
+  background-color: aliceblue;
+  float: left;
+  padding-bottom: 2rem;
+  width: 100%; }
+
+.block-set-title {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  padding-left: 1rem;
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-align: left; }
 
 .block {
-  background-color: #fafafa;
-  padding: 1rem;
+  background-color: white;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   border-width: 1px 6px 6px 1px;
   border-style: solid;
   border-color: gray;
   border-right-color: black;
   border-radius: 8px;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: left;
+  box-shadow: 5px 5px 10px; }
+
+.ghost-block {
+  display: none; }
 
 .block-top {
   margin-bottom: 20px; }
 
 .block-title {
-  color: rgba(153, 204, 50, 0.69);
+  color: #333745;
   text-align: left;
   font-size: 2rem;
   margin: 10px auto 0px auto; }
 
+.block-source {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1rem;
+  background-color: rgba(165, 56, 255, 0.02); }
+
 #work {
   background-color: rgba(255, 192, 203, 0.3); }
+  #work .work-block {
+    border-color: darksalmon;
+    border-right-color: #af715c; }
+    #work .work-block .block-title {
+      color: pink; }
 
-.work-block {
-  background-color: #fafafa;
-  border-color: darksalmon;
-  border-right-color: #af715c; }
-  .work-block .block-title {
-    color: pink; }
+.skills-applied {
+  list-style-type: none;
+  margin: auto auto 10px auto;
+  padding-left: 0; }
+  .skills-applied li {
+    background-color: gray;
+    color: white;
+    padding: 0.33rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0.25rem;
+    box-shadow: 4px 4px 4px black; }
+
+#pond-preview {
+  margin: auto;
+  width: 50%; }
+
+#education .education-block {
+  border-color: rgba(149, 210, 237, 0.85);
+  border-right-color: #648da1; }
+#education .block-title {
+  color: rgba(160, 225, 255, 0.9); }
+#education .book-block {
+  padding: 0px 5px 15px 5px;
+  display: block;
+  color: pink;
+  text-shadow: none; }
+  #education .book-block:hover {
+    color: pink;
+    text-shadow: none; }
+  #education .book-block:active {
+    text-shadow: none; }
+  #education .book-block h3 {
+    margin: 15px auto 5px auto; }
+  #education .book-block i {
+    color: #4ecdc4;
+    display: block;
+    text-align: right; }
+#education .book-block:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.69);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  #education .book-block:nth-child(odd) h3 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  #education .book-block:nth-child(odd) i {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+#education .ca-block {
+  padding-bottom: 15px;
+  display: block;
+  color: pink;
+  text-shadow: none; }
+  #education .ca-block:hover {
+    color: pink;
+    text-shadow: none; }
+  #education .ca-block:active {
+    text-shadow: none; }
+  #education .ca-block h3 {
+    margin: 15px auto 5px auto; }
+  #education .ca-block i {
+    color: #4ecdc4;
+    display: block;
+    text-align: right; }
+#education .ca-block:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.69);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  #education .ca-block:nth-child(odd) h3 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  #education .ca-block:nth-child(odd) i {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+
+#resume {
+  background-color: rgba(229, 191, 225, 0.29);
+  text-align: center; }
+  #resume p {
+    margin-left: 3rem;
+    margin-right: 3rem; }
+  #resume a {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+
+#about {
+  background-color: rgba(214, 255, 214, 0.73); }
+  #about .about-block {
+    border-color: #badfba;
+    border-right-color: #6f846f; }
+
+#nav {
+  background-color: rgba(250, 255, 128, 0.33);
+  float: none;
+  margin-top: -1em;
+  padding-top: 1em; }
 
 .nav {
-  text-align: center; }
+  text-align: center;
+  padding: 0.5rem; }
+  .nav.block {
+    width: 80%;
+    margin-bottom: 1rem;
+    border-color: #f1f67b;
+    border-right-color: #b0b359;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
   .nav a.title {
     font-size: 3.3rem;
     font-family: "Lato", sans-serif; }
-    .nav a.title .schmid-colors {
-      color: rgba(78, 205, 196, 0.66);
-      text-decoration: none;
-      text-shadow: 6px 5px rgba(255, 107, 107, 0.66); }
     .nav a.title:hover {
       color: rgba(255, 107, 107, 0.8);
-      text-decoration: none;
-      text-shadow: 4px 3px rgba(78, 205, 196, 0.8); }
-    .nav a.title:active {
-      text-shadow: 0px 0px rgba(78, 205, 196, 0.9); }
+      text-decoration: none; }
   .nav .subtitle {
     color: rgba(30, 30, 36, 0.75);
     font-family: "Railway", sans-serif;
     font-size: 1rem;
     font-weight: 700; }
 
-ul {
-  list-style-type: none; }
-
 footer ul {
   list-style-type: none;
   padding: 1rem;
   text-align: center; }
+  footer ul a {
+    color: #faff7f; }
   footer ul li {
     display: inline-block;
     padding: 1em;
     color: black; }
   footer ul i.fa.font-awesome {
     font-size: 4.5rem; }
+
+@media(min-width:480px)/*small tablets portrait*/ {
+  .block {
+    padding-left: 3rem;
+    padding-right: 3rem; }
+
+  .block-source {
+    margin-left: -3rem;
+    margin-right: -3rem; }
+
+  #education .book-block:nth-child(odd) {
+    margin-left: -3rem;
+    margin-right: -3rem; }
+    #education .book-block:nth-child(odd) h3 {
+      margin-left: 3rem;
+      margin-right: 3rem; }
+    #education .book-block:nth-child(odd) i {
+      margin-left: 3rem;
+      margin-right: 3rem; }
+  #education .ca-block:nth-child(odd) {
+    margin-left: -3rem;
+    margin-right: -3rem; }
+    #education .ca-block:nth-child(odd) h3 {
+      margin-left: 3rem;
+      margin-right: 3rem; }
+    #education .ca-block:nth-child(odd) i {
+      margin-left: 3rem;
+      margin-right: 3rem; }
+
+  #pond-preview {
+    margin: auto;
+    width: 50%; } }
+@media(min-width:769px) /*small tablets(landscape)*/ {
+  .nav.block {
+    width: 40%; }
+
+  .block {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .block-preview {
+    width: 90%;
+    margin: auto; }
+    .block-preview + p {
+      width: 100%; }
+    .block-preview + ul {
+      width: 100%; }
+
+  #pond-preview {
+    width: 30%;
+    float: right;
+    margin: 1rem 2rem 1rem 1rem; }
+    #pond-preview + p {
+      width: 61%;
+      float: left; }
+
+  #pond-block-top {
+    float: left; }
+
+  .block-set-title {
+    padding-left: 3rem;
+    font-size: 2rem; } }
+@media(min-width:1281px) /*large laptops/desktops*/ {
+  .block {
+    width: 37%;
+    margin-left: auto;
+    margin-right: auto; }
+
+  /* change this when you add more projects */
+  .ghost-block {
+    display: none;
+    visibility: hidden; }
+
+  .block {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
+  .block-set {
+    text-align: center;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  #pond-preview {
+    margin: 1rem 1rem 1rem 1rem; } }
+@media(min-width:1025px) /*standard laptops/desktops - large tablets(portrait) */;
 
 /*# sourceMappingURL=style.css.map */
