@@ -1,23 +1,29 @@
 @import 'fonts'
 @import 'colors'
+@import 'mixins'
 
+
+
+.clear
+	clear: both
+	line-height: 0
 
 //body setup
 body
 	margin: 0
 	font-family: $lato
+	color: $onyx
 //links
 a
-	color: rgba($medium-turquoise, 0.88)
+	color: rgba(248, 223, 79, 1)
 	cursor: pointer
 	text-decoration: none
-	text-shadow: 3px 3px rgba($pastel-red, 0.5)
 a:hover
 	color: rgba($pastel-red, 0.9)
 	text-decoration: none
-	text-shadow: 2px 2px rgba($medium-turquoise, 0.9)
+	//text-shadow: 2px 2px rgba($medium-turquoise, 0.9)
 a:active
-	text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
+	//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 .live-link
 	display: block
 	text-align: center
@@ -34,31 +40,49 @@ img
 
 //general block setup
 .block-set
-	padding: 1rem
 	background-color: aliceblue
+	float: left
+	padding-bottom: 2rem
+	width: 100%
 .block-set-title
 	color: white
 	text-shadow: 2px 2px 5px black
+	padding-left: 1rem
+	font-size: 2rem
+	padding-top: 1rem
+	text-align: left
 .block
-	background-color: $dirty-white
-	padding: 1rem
+	background-color: white
+	padding: 1rem $side-padding 1rem $side-padding
 	border-width: 1px 6px 6px 1px
 	border-style: solid
 	border-color: gray
 	border-right-color: black
 	border-radius: 8px
 	margin-top: 1rem
+	margin-left: $side-padding
+	margin-right: $side-padding
+	text-align: left
+	box-shadow: 5px 5px 10px
+.ghost-block
+	display: none
 .block-top
 	margin-bottom: 20px
 .block-title
-	color: rgba(153, 204, 50, 0.69)
+	color: $onyx
 	text-align: left
 	font-size: 2.0rem
 	margin: 10px auto 0px auto
 .block-source
 	display: block
-	text-align: right
-
+	text-align: center
+	font-size: 1.4rem
+	padding-top: 1rem
+	padding-bottom: 1rem
+	margin-left: -$side-padding
+	margin-right: -$side-padding
+	margin-bottom: -1rem
+	background-color: rgba(165, 56, 255, 0.02)
 //work-block-set
 #work
 	background-color: rgba(255, 192, 203, 0.3)
@@ -67,21 +91,28 @@ img
 		border-right-color: rgb(175, 113, 92)
 		.block-title
 			color: pink
-		.skills-applied
-			list-style-type: none
-			margin: auto auto 10px auto
-			padding-left: 0
-			li
-				background-color: gray
-				color: white
-				padding: 0.33rem
-				border-radius: 3px
-				display: inline-block
-				margin: 0.25rem
-				box-shadow: 5px 5px 5px black
-
+.skills-applied
+	list-style-type: none
+	margin: auto auto 10px auto
+	padding-left: 0
+	li
+		background-color: gray
+		color: white
+		padding: 0.33rem
+		border-radius: 3px
+		display: inline-block
+		margin: 0.25rem
+		box-shadow: 4px 4px 4px black
+#pond-preview
+	margin: auto
+	width: 50%
 //education-block-set
 #education
+	.education-block
+		border-color: rgba(149, 210, 237, 0.85)
+		border-right-color: rgba(100, 141, 161, 1)
+	.block-title
+		color: $deep-alice
 	.book-block
 		padding: 0px 5px 15px 5px
 		display: block
@@ -100,18 +131,18 @@ img
 			text-align: right
 	.book-block:nth-child(odd)
 		background-color: rgba(242, 242, 242, 0.69)
-		margin-left: -16px
-		margin-right: -16px
+		margin-left: -$side-padding
+		margin-right: -$side-padding
 		border-top: 1px solid $border-outline
 		border-bottom: 1px solid $border-outline
 		h3
-			margin-left: 16px 
-			margin-right: 16px
+			margin-left: $side-padding
+			margin-right: $side-padding
 		i
-			margin-left: 16px 
-			margin-right: 16px	
+			margin-left: $side-padding 
+			margin-right: $side-padding	
 	.ca-block
-		padding: 0px 5px 15px 5px
+		padding-bottom: 15px
 		display: block
 		color: pink
 		text-shadow: none
@@ -128,34 +159,56 @@ img
 			text-align: right		
 	.ca-block:nth-child(odd)
 		background-color: rgba(242, 242, 242, 0.69)
-		margin-left: -16px
-		margin-right: -16px
+		margin-left: -$side-padding
+		margin-right: -$side-padding
 		border-top: 1px solid $border-outline
 		border-bottom: 1px solid $border-outline
 		h3
-			margin-left: 16px 
-			margin-right: 16px
+			margin-left: $side-padding 
+			margin-right: $side-padding
 		i
-			margin-left: 16px 
-			margin-right: 16px	
+			margin-left: $side-padding 
+			margin-right: $side-padding
+#resume
+	background-color: $english-lavender
+	text-align: center
+	p
+		margin-left: 3rem
+		margin-right: 3rem
+	a
+		margin-left: 1rem
+		margin-right: 1rem
+#about
+	background-color: $mint-green
+	.about-block
+		border-color: rgba(186, 223, 186, 1)
+		border-right-color: rgba(111, 132, 111, 1)
 //navbar
+#nav
+	background-color: rgba(250, 255, 128, 0.33)
+	float: none
+	margin-top: -1em
+	padding-top: 1em
 .nav
 	text-align: center
 	padding: 0.5rem
+	&.block
+		width: 80%
+		margin-bottom: 1rem
+		border-color: #f1f67b
+		border-right-color: #b0b359
+		display: block
+		margin-left: auto
+		margin-right: auto
 	a.title	
 		font-size: 3.3rem
 		font-family: $lato
-		.schmid-colors	
-			//3d nav transparent shadows effects
-			color: rgba($medium-turquoise, 0.66)
-			text-decoration: none
-			text-shadow: 6px 5px rgba($pastel-red, 0.66)
 		&:hover
 			color: rgba($pastel-red, 0.8)
 			text-decoration: none
-			text-shadow: 4px 3px rgba($medium-turquoise, 0.8)
+			//text-shadow: 4px 3px rgba($medium-turquoise, 0.8)
 		&:active
-			text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
+			//text-shadow: 0px 0px rgba($medium-turquoise, 0.9)
 	.subtitle
 		color: rgba($raisin-black, 0.75)
 		font-family: $railway
@@ -166,6 +219,8 @@ footer ul
 	list-style-type: none
 	padding: 1rem
 	text-align: center
+	a
+		color: $sunny
 	li 
 		display: inline-block
 		padding: 1em
@@ -173,17 +228,51 @@ footer ul
 	i.fa.font-awesome 
 		font-size: 4.5rem
 
-// @media(min-width:320px) 
-
-// @media(min-width:481px) 
-
-// @media(min-width:641px) 
-
-
-
-
-// @media(min-width:1025px) 
-
-// @media(min-width:1281px) //large screens
-
+@media(min-width:480px)/*small tablets portrait*/ 
+	+updateBlockSidePadding(3rem)
+	#pond-preview
+		margin: auto
+		width: 50%
+@media(min-width:769px) /*small tablets(landscape)*/
+	.nav.block
+		width: 40%
+	+updateBlockWidth(75%)
+	.block-preview
+		width: 90%
+		margin: auto
+		&+p
+			width: 100%
+		&+ul
+			width: 100%
+	#pond-preview
+		width: 30%
+		float: right
+		margin: 1rem 2rem 1rem 1rem
+		&+p
+			width: 61%
+			float: left
+	#pond-block-top
+		float: left
+	.block-set-title
+		padding-left: 3rem
+		font-size: 2rem
+@media(min-width:1281px) /*large laptops/desktops*/
+	+updateBlockWidth(37%)
+	/* change this when you add more projects */
+	.ghost-block
+		display: none
+		visibility: hidden
+	.block
+		display: inline-block
+		vertical-align: top
+		margin-top: 1rem
+		margin-bottom: 1rem
+	.block-set
+		text-align: center
+		margin: auto
+		padding-top: 1rem
+		padding-bottom: 1rem
+	#pond-preview
+		margin: 1rem 1rem 1rem 1rem
+@media(min-width:1025px) /*standard laptops/desktops - large tablets(portrait) */
 
